@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane fx:id="altaJugador" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="392.0" styleClass="fondo" stylesheets="@../../estilos/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guve.proyectoPadelUpDida.ControladorJugadores">
+   <children>
+      <Label layoutX="13.0" layoutY="38.0" text="Nombre" />
+      <TextField fx:id="textFieldNombre" layoutX="165.0" layoutY="33.0">
+         <tooltip>
+            <Tooltip text="campo obligatorio" />
+         </tooltip>
+      </TextField>
+      <Label layoutX="13.0" layoutY="83.0" text="Primer apellido" />
+      <TextField fx:id="textFieldApellido1" layoutX="165.0" layoutY="78.0">
+         <tooltip>
+            <Tooltip text="campo obligatorio" />
+         </tooltip>
+      </TextField>
+      <Label layoutX="10.0" layoutY="128.0" text="Segundo Apellido" />
+      <TextField fx:id="textFieldApellido2" layoutX="165.0" layoutY="123.0" />
+      <Label layoutX="10.0" layoutY="173.0" text="Apodo" />
+      <TextField fx:id="textFieldApodo" layoutX="165.0" layoutY="168.0" />
+      <Label layoutX="13.0" layoutY="218.0" text="Teléfono" />
+      <TextField fx:id="textFieldTelefono" layoutX="165.0" layoutY="213.0" />
+      <Label layoutX="13.0" layoutY="263.0" text="Posición" />
+      <ComboBox fx:id="comboBoxPosicion" layoutX="166.0" layoutY="258.0" prefHeight="31.0" prefWidth="187.0">
+      	<items>
+	        <FXCollections fx:factory="observableArrayList">
+	          <String fx:value="Derecha" />
+	          <String fx:value="Revés" />
+	          <String fx:value="Ambas" />
+	        </FXCollections>
+	     </items>
+         <tooltip>
+            <Tooltip text="campo obligatorio" />
+         </tooltip>
+      </ComboBox>
+      <Label layoutX="13.0" layoutY="308.0" text="Puntos" />
+      <TextField fx:id="textFieldPuntos" layoutX="165.0" layoutY="303.0">
+         <tooltip>
+            <Tooltip text="campo numérico obligatorio" />
+         </tooltip>
+      </TextField>
+      <Label layoutX="68.0" layoutY="38.0" text="*" textFill="#db1212" />
+      <Label layoutX="114.0" layoutY="83.0" text="*" textFill="#db1212" />
+      <Label layoutX="68.0" layoutY="263.0" text="*" textFill="#db1212" />
+      <Label layoutX="60.0" layoutY="308.0" text="*" textFill="#db1212" />
+      <Button fx:id="botonAceptar" layoutX="121.0" layoutY="345.0" mnemonicParsing="false" onAction="#botonAceptar" prefHeight="39.0" prefWidth="65.0" styleClass="fondo3">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/aceptar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <tooltip>
+            <Tooltip text="Aceptar" />
+         </tooltip>
+      </Button>
+      <Button fx:id="botonCancelar" layoutX="206.0" layoutY="345.0" mnemonicParsing="false" onAction="#botonCancelar" prefHeight="39.0" prefWidth="65.0" styleClass="fondo3">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/cancelar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Cancelar" />
+         </tooltip>
+      </Button>
+   </children>
+</AnchorPane>

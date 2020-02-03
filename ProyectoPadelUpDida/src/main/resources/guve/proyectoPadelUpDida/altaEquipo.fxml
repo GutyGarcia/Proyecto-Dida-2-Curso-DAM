@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="PantallaAltaEquipo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="151.0" prefWidth="452.0" styleClass="fondo" stylesheets="@../../estilos/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guve.proyectoPadelUpDida.ControladorAltaEquipos">
+   <children>
+      <Label layoutX="28.0" layoutY="35.0" text="Nombre del equipo" />
+      <TextField fx:id="textFieldNombreEquipo" layoutX="168.0" layoutY="30.0" prefHeight="31.0" prefWidth="244.0" />
+      <Button id = "botonAceptar" onAction="#botonAceptar"  layoutX="147.0" layoutY="84.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="65.0" styleClass="fondo3">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/aceptar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <tooltip>
+            <Tooltip text="Aceptar" />
+         </tooltip>
+      </Button>
+      <Button id = "botonCancelar" onAction="#botonCancelar" layoutX="233.0" layoutY="84.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="65.0" styleClass="fondo3">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/cancelar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Cancelar" />
+         </tooltip>
+      </Button>
+   </children>
+</AnchorPane>

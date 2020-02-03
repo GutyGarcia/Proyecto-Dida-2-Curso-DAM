@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox fx:id="principal" alignment="CENTER_LEFT" prefHeight="620.0" prefWidth="698.0" spacing="20" styleClass="fondo" stylesheets="@../../estilos/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guve.proyectoPadelUpDida.ControladorEquipos">
+	
+	<padding>
+		<Insets bottom="10" left="10" right="10" top="10" />
+	</padding>
+	<children>
+
+		<GridPane hgap="10" prefHeight="126.0" prefWidth="689.0" vgap="10">
+
+			<padding>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</padding>
+			<children>
+
+				<Text style="-fx-font-weight: bold;" text="Equipo: " GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+					<font>
+						<Font name="Cambria" size="20" />
+					</font>
+				</Text>
+            <ComboBox fx:id="comboEquipos" prefHeight="31.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.columnSpan="2">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></ComboBox>
+            <Button mnemonicParsing="false" onAction="#pantallaAltaEquipo" prefHeight="53.0" prefWidth="35.0" styleClass="fondo3" GridPane.columnIndex="2">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imagenes/anadirEquipo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Alta Equipo" />
+               </tooltip>
+               <GridPane.margin>
+                  <Insets left="110.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="bajaEquipo" mnemonicParsing="false" onAction="#bajaEquipo" prefHeight="53.0" prefWidth="35.0" styleClass="fondo3" GridPane.columnIndex="2">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imagenes/eliminarEquipo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="165.0" />
+               </GridPane.margin>
+               <tooltip>
+                  <Tooltip text="Baja Equipo" />
+               </tooltip>
+            </Button>
+            <Button fx:id="consultarJugadores" mnemonicParsing="false" onAction="#consultarJugadores" prefHeight="53.0" prefWidth="35.0" styleClass="fondo3" GridPane.columnIndex="2">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imagenes/busqueda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="220.0" />
+               </GridPane.margin>
+               <tooltip>
+                  <Tooltip text="Consultar Jugadores" />
+               </tooltip>
+            </Button>
+            <ImageView fitHeight="85.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+               <image>
+                  <Image url="@../../imagenes/logoAzul.PNG" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="346.0" />
+               </GridPane.margin>
+            </ImageView>
+			</children>
+			<columnConstraints>
+				<ColumnConstraints maxWidth="465.0" minWidth="36.0" prefWidth="95.0" />
+				<ColumnConstraints maxWidth="465.0" minWidth="36.0" prefWidth="144.0" />
+            <ColumnConstraints maxWidth="623.0" minWidth="194.0" prefWidth="445.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints />
+				<RowConstraints />
+				<RowConstraints />
+            <RowConstraints />
+			</rowConstraints>
+		</GridPane>
+
+		<StackPane HBox.hgrow="ALWAYS">
+			<children>
+				<TableView fx:id="tablaJugadores" prefHeight="490.0" prefWidth="689.0" styleClass="fondo2">
+					<columns>
+						<TableColumn prefWidth="76.0" text="Id">
+							<cellValueFactory>
+								<PropertyValueFactory property="IdJugador" />
+							</cellValueFactory>
+						</TableColumn>
+						<TableColumn prefWidth="155.0" text="Nombre">
+							<cellValueFactory>
+								<PropertyValueFactory property="Nombre" />
+							</cellValueFactory>
+						</TableColumn>
+						<TableColumn minWidth="9.0" prefWidth="180.0" text="Apellido">
+							<cellValueFactory>
+								<PropertyValueFactory property="PrimerApellido" />
+							</cellValueFactory>
+						</TableColumn>
+                  <TableColumn prefWidth="161.0" text="Apodo">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="Apodo" />
+                     </cellValueFactory>
+                  </TableColumn>
+					</columns>
+				</TableView>
+			</children>
+		</StackPane>
+      <Pane prefHeight="161.0" prefWidth="689.0">
+         <children>
+            <Button fx:id="altaJugador" layoutX="268.0" layoutY="-6.0" mnemonicParsing="false" onAction="#pantallaAltaJugador" prefHeight="50.0" prefWidth="50.0" styleClass="fondo3">
+               <graphic>
+                  <ImageView fitHeight="63.0" fitWidth="64.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imagenes/altaJugador.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="7.0" />
+               </padding>
+               <tooltip>
+                  <Tooltip text="Alta Jugador" />
+               </tooltip>
+            </Button>
+            <Button fx:id="bajaJugador" layoutX="351.0" layoutY="-6.0" mnemonicParsing="false" onAction="#bajaJugador" prefHeight="64.0" prefWidth="64.0" styleClass="fondo3">
+               <graphic>
+                  <ImageView fitHeight="63.0" fitWidth="64.0" preserveRatio="true" styleClass="fondo3">
+                     <image>
+                        <Image url="@../../imagenes/bajaJugador.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <tooltip>
+                  <Tooltip text="Baja Jugador" />
+               </tooltip>
+          </Button>
+         </children>
+      </Pane>
+	</children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</VBox>

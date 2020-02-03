@@ -1,0 +1,21 @@
+.fondo {
+    -fx-background-color: #66A5AD;
+}
+.fondo2 {
+    -fx-background-color: #C4DFE6;
+}
+.fondo3 {
+    -fx-background-color: #07575B;
+}
+
+.myDialog{
+    -fx-background-color: #66A5AD;
+}
+
+.myDialog:header *.header-panel{
+    -fx-background-color: #66A5AD;
+}
+
+.myDialog:header *.header-panel *.button{
+    -fx-background-color: #FFFFFF;
+}
